@@ -35,8 +35,8 @@ namespace WorkerBee
         protected override void OnStartup(StartupEventArgs e)
         {
             // Setting the layout navigation store's CurrentContentViewModel
-            // to the home view-model on startup is FOR TESTING ONLY!!!!!!!!
-            _layoutNavigationStore.CurrentContentViewModel = new HomeViewModel();
+            // to the create new book view-model on startup is FOR TESTING ONLY!!!!!!!!
+            _layoutNavigationStore.CurrentContentViewModel = new CreateNewBookViewModel();
 
             // Setting the navigation store's CurrentMainViewModel to the
             // layout view-model on startup is FOR TESTING ONLY!!!!!!!!!!
