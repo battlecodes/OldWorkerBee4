@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:WorkerBee">
     <Application.Resources>
         <!-- Global Styles -->
+        <Color x:Key="GlobalElementColor">#FF3D3D3D</Color>
         <FontFamily x:Key="GlobalFontFamily">Century Gothic</FontFamily>
         
         
@@ -17,12 +18,20 @@
         </Style>
         
         
-        <!-- Panel Styles -->
+        <!-- Pane Styles -->
         <Style x:Key="PaneBackgroundBorderStyle" TargetType="Border">
             <Setter Property="Background" Value="White"/>
             <Setter Property="Opacity" Value="0.8"/>
             <Setter Property="Padding" Value="10"/>
             <Setter Property="CornerRadius" Value="16"/>
+        </Style>
+
+        <Style x:Key="PaneSeparatorBorderStyle" TargetType="Border">
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <SolidColorBrush Color="{StaticResource GlobalElementColor}"/>
+                </Setter.Value>
+            </Setter>
         </Style>
         
         
