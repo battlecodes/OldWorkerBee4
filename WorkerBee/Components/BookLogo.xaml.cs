@@ -20,6 +20,21 @@ namespace WorkerBee.Components
     /// </summary>
     public partial class BookLogo : UserControl
     {
+
+        public static readonly DependencyProperty BookNameProperty =
+            DependencyProperty.Register("BookName", typeof(string),
+                typeof(BookLogo), new PropertyMetadata(null));
+
+
+
+        public string BookName
+        {
+            get { return (string)GetValue(BookNameProperty); }
+            set { SetValue(BookNameProperty, value); }
+        }
+
+
+
         public BookLogo()
         {
             InitializeComponent();

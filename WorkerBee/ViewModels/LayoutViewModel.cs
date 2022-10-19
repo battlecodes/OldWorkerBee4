@@ -27,6 +27,10 @@ namespace WorkerBee.ViewModels
             _bookStore.CurrentBook;
 
 
+        public string CurrentBookName =>
+            CurrentBook == null ? "No Active Book" : CurrentBook.Name;
+
+
 
         public LayoutViewModel(LayoutNavigationStore layoutNavigationStore,
             BookStore bookStore)
@@ -50,6 +54,7 @@ namespace WorkerBee.ViewModels
         private void OnCurrentBookChanged()
         {
             OnPropertyChanged(nameof(CurrentBook));
+            OnPropertyChanged(nameof(CurrentBookName));
         }
     }
 }

@@ -41,7 +41,8 @@
 
                 <!-- Top Bar -->
                 <local:TopBar
-                    Grid.ColumnSpan="2"/>
+                    Grid.ColumnSpan="2"
+                    BookLogoName="{Binding CurrentBookName}"/>
         
         
                 <!-- Navigation Bar -->

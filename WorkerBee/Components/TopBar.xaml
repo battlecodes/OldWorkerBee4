@@ -23,7 +23,8 @@
         <!-- Book -->
         <local:BookLogo
             Grid.Column="1"
-            HorizontalAlignment="Right"/>
+            HorizontalAlignment="Right"
+            Content="{Binding BookLogoName, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
 
     </Grid>
     
