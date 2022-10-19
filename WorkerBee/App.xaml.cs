@@ -17,16 +17,15 @@ namespace WorkerBee
     public partial class App : Application
     {
 
+        private readonly BookStore _bookStore;
         private readonly LayoutNavigationStore _layoutNavigationStore;
-
-
-
         private readonly NavigationStore _navigationStore;
 
 
 
         public App()
         {
+            _bookStore = new BookStore();
             _layoutNavigationStore = new LayoutNavigationStore();
             _navigationStore = new NavigationStore();
         }
@@ -41,7 +40,7 @@ namespace WorkerBee
 
             // Setting the navigation store's CurrentMainViewModel to the
             // layout view-model on startup is FOR TESTING ONLY!!!!!!!!!!
-            _navigationStore.CurrentMainViewModel = new LayoutViewModel(_layoutNavigationStore);
+            _navigationStore.CurrentMainViewModel = new LayoutViewModel(_layoutNavigationStore, _bookStore);
 
 
 
