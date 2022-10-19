@@ -17,7 +17,7 @@
         <Grid.Background>
             <ImageBrush
                 ImageSource="\rsc\img\bgd\white-gray-hexagon-pattern-background\background.jpg"
-                Opacity=".7"/>
+                Opacity="1"/>
         </Grid.Background>
         
         

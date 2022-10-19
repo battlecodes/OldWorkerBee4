@@ -6,21 +6,62 @@
              xmlns:local="clr-namespace:WorkerBee.Components"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <!-- Layout Border -->
+        <Style x:Key="LayoutBorderStyle" TargetType="Border">
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="CornerRadius" Value="16"/>
+        </Style>
+        
+        
+        <!-- Top Bar Styles -->
+        <Style TargetType="{x:Type local:TopBar}">
+            <Setter Property="Height" Value="25"/>
+        </Style>
+    </UserControl.Resources>
     
     <Grid>
+        <Border
+            Style="{StaticResource LayoutBorderStyle}">
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+            <Border.Background>
+                <SolidColorBrush Color="#FFABABAB"
+                                 Opacity="0.7"/>
+            </Border.Background>
+
+            <Grid>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
 
-        <Label Content="Layout Placeholder"/>
+                <!-- Top Bar -->
+                <local:TopBar
+                    Grid.ColumnSpan="2"/>
+        
+        
+                <!-- Navigation Bar -->
+                <Label
+                    Grid.Row="1"
+                    Content="Navigation Bar Placeholder"/>
+        
+        
+                <!-- Content -->
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Content="Content Placeholder"/>
 
+            </Grid>
+
+        </Border>
     </Grid>
     
 </UserControl>
