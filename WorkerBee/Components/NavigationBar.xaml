@@ -22,10 +22,13 @@
             <StackPanel>
 
                 <local:NavigationBarButton
-                    ButtonContentText="HOME"/>
+                    ButtonContentText="Home"/>
 
                 <local:NavigationBarButton
-                    ButtonContentText="PROJECTS"/>
+                    ButtonContentText="Projects"/>
+
+                <local:NavigationBarButton
+                    ButtonContentText="Settings"/>
 
             </StackPanel>
 

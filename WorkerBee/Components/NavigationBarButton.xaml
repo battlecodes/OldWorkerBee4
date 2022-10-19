@@ -32,6 +32,9 @@
                     <Setter Property="Foreground" Value="White"/>
                     <Setter Property="Cursor" Value="Hand"/>
                 </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Foreground" Value="#FFBCBCFF"/>
+                </Trigger>
             </Style.Triggers>
         </Style>
 
