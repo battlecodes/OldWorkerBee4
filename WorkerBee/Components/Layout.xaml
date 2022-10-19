@@ -34,7 +34,7 @@
                 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -48,11 +48,11 @@
         
         
                 <!-- Navigation Bar -->
-                <Label
+                <local:NavigationBar
                     Grid.Row="1"
-                    Content="Navigation Bar Placeholder"/>
-        
-        
+                    Margin="0,60,0,0"/>
+
+
                 <!-- Content -->
                 <Label
                     Grid.Row="1"

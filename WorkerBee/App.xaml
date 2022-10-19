@@ -17,5 +17,14 @@
         </Style>
         
         
+        <!-- Panel Styles -->
+        <Style x:Key="PaneBackgroundBorderStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Opacity" Value="0.8"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="CornerRadius" Value="16"/>
+        </Style>
+        
+        
     </Application.Resources>
 </Application>
