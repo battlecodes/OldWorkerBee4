@@ -3,6 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WorkerBee">
     <Application.Resources>
-         
+        <!-- Global Styles -->
+        <FontFamily x:Key="GlobalFontFamily">Century Gothic</FontFamily>
+        
+        
+        <!-- Logo Styles -->
+        <Style x:Key="LogoLabelStyle" TargetType="Label">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10,0,0,0"/>
+            <Setter Property="FontFamily" Value="{StaticResource GlobalFontFamily}"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        
+        
     </Application.Resources>
 </Application>

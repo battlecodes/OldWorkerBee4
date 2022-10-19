@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WorkerBee.Stores;
+using WorkerBee.ViewModels;
 using WorkerBee.Views;
 
 namespace WorkerBee
@@ -15,11 +17,28 @@ namespace WorkerBee
     public partial class App : Application
     {
 
+        private readonly NavigationStore _navigationStore;
+
+
+
+        public App()
+        {
+            _navigationStore = new NavigationStore();
+        }
+
+
+
         protected override void OnStartup(StartupEventArgs e)
         {
 
+            // Setting the navigation store's CurrentMainViewModel to the
+            // layout view-model on startup is FOR TESTING ONLY!!!!!!!!!!
+            _navigationStore.CurrentMainViewModel = new LayoutViewModel();
+
+
+
             MainWindowViewModel mainWindowViewModel =
-                new MainWindowViewModel();
+                new MainWindowViewModel(_navigationStore);
             MainWindow = new MainWindowView()
             {
                 DataContext = mainWindowViewModel,

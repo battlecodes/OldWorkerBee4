@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="WorkerBee.Components.BeeWithLabelLogo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WorkerBee.Components"
+             mc:Ignorable="d">
+
+    <Grid>
+
+        <StackPanel Orientation="Horizontal">
+            <Image Source="\rsc\img\icons\logo-bee-and-comb\honeycomb.png"/>
+            <Label
+                Content="Worker Bee"
+                Style="{StaticResource LogoLabelStyle}"/>
+        </StackPanel>
+        
+    </Grid>
+    
+</UserControl>

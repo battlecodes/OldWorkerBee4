@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorkerBee.Views"
+        xmlns:viewmodels="clr-namespace:WorkerBee.ViewModels"
+        xmlns:components="clr-namespace:WorkerBee.Components"
         mc:Ignorable="d"
         Title="MainWindowView"
         Height="550"
@@ -17,6 +19,18 @@
                 ImageSource="\rsc\img\bgd\white-gray-hexagon-pattern-background\background.jpg"
                 Opacity=".7"/>
         </Grid.Background>
+        
+        
+        <!-- Main Content -->
+        <ContentControl
+            Content="{Binding CurrentMainViewModel}"
+            Margin="15">
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type viewmodels:LayoutViewModel}">
+                    <components:Layout/>
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
         
     </Grid>
     

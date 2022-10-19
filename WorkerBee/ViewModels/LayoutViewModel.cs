@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WorkerBee.ViewModels;
 
-namespace WorkerBee.Views
+namespace WorkerBee.ViewModels
 {
-    public class MainWindowViewModel : ViewModelBase
+    public class LayoutViewModel : ViewModelBase
     {
     }
 }
