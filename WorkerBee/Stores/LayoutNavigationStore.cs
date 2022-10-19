@@ -9,5 +9,30 @@ namespace WorkerBee.Stores
 {
     public class LayoutNavigationStore
     {
+        // Backing Fields
+        private ViewModelBase? currentContentViewModel;
+
+
+
+        public ViewModelBase? CurrentContentViewModel
+        {
+            get => currentContentViewModel;
+            set
+            {
+                currentContentViewModel = value;
+                OnCurrentContentViewModelChanged();
+            }
+        }
+
+
+
+        public event Action? CurrentContentViewModelChanged;
+
+
+
+        private void OnCurrentContentViewModelChanged()
+        {
+            CurrentContentViewModelChanged?.Invoke();
+        }
     }
 }
