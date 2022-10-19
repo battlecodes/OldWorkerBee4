@@ -7,4 +7,20 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="rsc\img\bgd\stylish-hexagonal-line-pattern-background\background.jpg" />
+    <None Remove="rsc\img\bgd\white-gray-hexagon-pattern-background\background.jpg" />
+    <None Remove="rsc\img\icons\logo-bee-and-comb\honeycomb.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="rsc\img\bgd\stylish-hexagonal-line-pattern-background\background.jpg" />
+    <Resource Include="rsc\img\bgd\white-gray-hexagon-pattern-background\background.jpg" />
+    <Resource Include="rsc\img\icons\logo-bee-and-comb\honeycomb.png" />
+  </ItemGroup>
+
 </Project>

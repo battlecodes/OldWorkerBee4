@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="WorkerBee.Components.NavigationBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WorkerBee.Components"
+             mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <!-- Border Styles -->
+        <Style TargetType="Border">
+            <Setter Property="BorderBrush" Value="#FF424242"/>
+            <Setter Property="BorderThickness" Value="0,0,1,0"/>
+            <Setter Property="Padding" Value="0,0,10,0"/>
+        </Style>
+        
+    </UserControl.Resources>
+    
+    <Grid>
+        <Border>
+
+            <StackPanel>
+
+                <local:NavigationBarButton
+                    ButtonContentText="Home"/>
+
+                <local:NavigationBarButton
+                    ButtonContentText="Projects"/>
+
+                <local:NavigationBarButton
+                    ButtonContentText="Settings"/>
+
+            </StackPanel>
+
+        </Border>
+    </Grid>
+    
+</UserControl>

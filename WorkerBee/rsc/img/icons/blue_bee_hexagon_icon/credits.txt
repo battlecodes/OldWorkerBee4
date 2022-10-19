@@ -1,0 +1,3 @@
+credit: <a target="_blank" href="https://icons8.com/icon/MVQKnEfVI1V0/bee">Bee</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+put this in the app's "About".
