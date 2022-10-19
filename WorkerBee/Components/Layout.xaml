@@ -26,12 +26,12 @@
     <Grid>
         <Border
             Style="{StaticResource LayoutBorderStyle}">
-
+            <!--
             <Border.Background>
                 <SolidColorBrush Color="#FFABABAB"
                                  Opacity="0.7"/>
             </Border.Background>
-
+            -->
             <Grid>
                 
                 <Grid.RowDefinitions>

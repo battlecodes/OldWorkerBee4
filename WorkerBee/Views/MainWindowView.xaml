@@ -24,7 +24,7 @@
         <!-- Main Content -->
         <ContentControl
             Content="{Binding CurrentMainViewModel}"
-            Margin="15">
+            Margin="0">
             <ContentControl.Resources>
                 <DataTemplate DataType="{x:Type viewmodels:LayoutViewModel}">
                     <components:Layout/>
