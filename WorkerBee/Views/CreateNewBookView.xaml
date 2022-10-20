@@ -31,7 +31,7 @@
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 
                 
@@ -42,11 +42,27 @@
                 <!-- User Input Fields -->
                 <StackPanel
                     Grid.Row="1"
-                    Margin="0,15,0,0">
-                    <Label Content="Book name"/>
-                    <TextBox/>
+                    HorizontalAlignment="Left"
+                    Margin="0,25,0,0">
+                    <Border
+                        Style="{StaticResource PaneBackgroundBorderStyle}"
+                        Background="#F0F0F0"
+                        Opacity="0.8">
+                        <StackPanel>
+                            <Label Content="Name"/>
+                            <TextBox/>
+                        </StackPanel>
+                    </Border>
+
+                    <Button
+                        Content="Create Book"
+                        Width="100"
+                        HorizontalAlignment="Right"
+                        Margin="0,10,15,0"
+                        FontFamily="{StaticResource GlobalFontFamily}"/>
+
                 </StackPanel>
-                
+
             </Grid>
 
         </Border>

@@ -17,13 +17,15 @@
         
         <!-- Logo -->
         <local:BeeWithLabelLogo
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"/>
         
         
         <!-- Book -->
         <local:BookLogo
             Grid.Column="1"
             HorizontalAlignment="Right"
+            VerticalAlignment=" Center"
             Content="{Binding BookLogoName, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
 
     </Grid>
