@@ -36,7 +36,7 @@ namespace WorkerBee
         {
             // Setting the layout navigation store's CurrentContentViewModel
             // to the create new book view-model on startup is FOR TESTING ONLY!!!!!!!!
-            _layoutNavigationStore.CurrentContentViewModel = new CreateNewBookViewModel();
+            _layoutNavigationStore.CurrentContentViewModel = new CreateNewBookViewModel(_bookStore);
 
             // Setting the navigation store's CurrentMainViewModel to the
             // layout view-model on startup is FOR TESTING ONLY!!!!!!!!!!

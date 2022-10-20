@@ -26,7 +26,18 @@ namespace WorkerBee.Stores
 
 
 
+        public int IdIndexer = 1;
+
+
+
         public event Action? CurrentBookChanged;
+
+
+
+        public int AssignId()
+        {
+            return IdIndexer++;
+        }
 
 
 
