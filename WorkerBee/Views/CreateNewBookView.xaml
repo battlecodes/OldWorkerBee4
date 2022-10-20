@@ -59,7 +59,8 @@
                         Width="100"
                         HorizontalAlignment="Right"
                         Margin="0,10,15,0"
-                        FontFamily="{StaticResource GlobalFontFamily}"/>
+                        FontFamily="{StaticResource GlobalFontFamily}"
+                        Command="{Binding CreateNewBookClickedCommand}"/>
 
                 </StackPanel>
 
