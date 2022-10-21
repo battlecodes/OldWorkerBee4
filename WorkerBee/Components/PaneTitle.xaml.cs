@@ -16,26 +16,26 @@ using System.Windows.Shapes;
 namespace WorkerBee.Components
 {
     /// <summary>
-    /// Interaction logic for BookLogo.xaml
+    /// Interaction logic for PaneTitle.xaml
     /// </summary>
-    public partial class BookLogo : UserControl
+    public partial class PaneTitle : UserControl
     {
 
-        public static readonly DependencyProperty BookNameProperty =
-            DependencyProperty.Register("BookName", typeof(string),
-                typeof(BookLogo), new PropertyMetadata(null));
+        public static readonly DependencyProperty TitleLabelTextProperty =
+            DependencyProperty.Register("TitleLabelText", typeof(string),
+                typeof(PaneTitle), new PropertyMetadata("Placeholder"));
 
 
 
-        public string BookName
+        public string TitleLabelText
         {
-            get { return (string)GetValue(BookNameProperty); }
-            set { SetValue(BookNameProperty, value); }
+            get { return (string)GetValue(TitleLabelTextProperty); }
+            set { SetValue(TitleLabelTextProperty, value); }
         }
 
 
 
-        public BookLogo()
+        public PaneTitle()
         {
             InitializeComponent();
         }

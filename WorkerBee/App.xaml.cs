@@ -17,16 +17,15 @@ namespace WorkerBee
     public partial class App : Application
     {
 
+        private readonly BookStore _bookStore;
         private readonly LayoutNavigationStore _layoutNavigationStore;
-
-
-
         private readonly NavigationStore _navigationStore;
 
 
 
         public App()
         {
+            _bookStore = new BookStore();
             _layoutNavigationStore = new LayoutNavigationStore();
             _navigationStore = new NavigationStore();
         }
@@ -36,12 +35,12 @@ namespace WorkerBee
         protected override void OnStartup(StartupEventArgs e)
         {
             // Setting the layout navigation store's CurrentContentViewModel
-            // to the home view-model on startup is FOR TESTING ONLY!!!!!!!!
-            _layoutNavigationStore.CurrentContentViewModel = new HomeViewModel();
+            // to the create new book view-model on startup is FOR TESTING ONLY!!!!!!!!
+            _layoutNavigationStore.CurrentContentViewModel = new CreateNewBookViewModel(_bookStore);
 
             // Setting the navigation store's CurrentMainViewModel to the
             // layout view-model on startup is FOR TESTING ONLY!!!!!!!!!!
-            _navigationStore.CurrentMainViewModel = new LayoutViewModel(_layoutNavigationStore);
+            _navigationStore.CurrentMainViewModel = new LayoutViewModel(_layoutNavigationStore, _bookStore);
 
 
 

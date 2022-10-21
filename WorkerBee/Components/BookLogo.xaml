@@ -10,7 +10,7 @@
 
         <StackPanel Orientation="Horizontal">
             <Label
-                Content="Placeholder"
+                Content="{Binding BookName, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
                 Style="{StaticResource LogoLabelStyle}"/>
         </StackPanel>
         

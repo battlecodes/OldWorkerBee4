@@ -20,6 +20,21 @@ namespace WorkerBee.Components
     /// </summary>
     public partial class TopBar : UserControl
     {
+
+        public static readonly DependencyProperty BookLogoNameProperty =
+            DependencyProperty.Register("BookLogoName", typeof(string),
+                typeof(TopBar), new PropertyMetadata(null));
+
+
+
+        public string BookLogoName
+        {
+            get { return (string)GetValue(BookLogoNameProperty); }
+            set { SetValue(BookLogoNameProperty, value); }
+        }
+
+
+
         public TopBar()
         {
             InitializeComponent();

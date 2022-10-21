@@ -26,12 +26,7 @@
     <Grid>
         <Border
             Style="{StaticResource LayoutBorderStyle}">
-            <!--
-            <Border.Background>
-                <SolidColorBrush Color="#FFABABAB"
-                                 Opacity="0.7"/>
-            </Border.Background>
-            -->
+            
             <Grid>
                 
                 <Grid.RowDefinitions>
@@ -46,7 +41,8 @@
 
                 <!-- Top Bar -->
                 <local:TopBar
-                    Grid.ColumnSpan="2"/>
+                    Grid.ColumnSpan="2"
+                    BookLogoName="{Binding CurrentBookName}"/>
         
         
                 <!-- Navigation Bar -->
@@ -65,6 +61,9 @@
                     <ContentControl.Resources>
                         <DataTemplate DataType="{x:Type viewmodels:HomeViewModel}">
                             <views:HomeView/>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type viewmodels:CreateNewBookViewModel}">
+                            <views:CreateNewBookView/>
                         </DataTemplate>
                     </ContentControl.Resources>
                 </ContentControl>

@@ -4,12 +4,16 @@ using System.Linq;
 using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
+using WorkerBee.Models;
 using WorkerBee.Stores;
 
 namespace WorkerBee.ViewModels
 {
     public class LayoutViewModel : ViewModelBase
     {
+
+        private readonly BookStore _bookStore;
+
 
         private readonly LayoutNavigationStore _layoutNavigationStore;
 
@@ -19,11 +23,22 @@ namespace WorkerBee.ViewModels
             _layoutNavigationStore.CurrentContentViewModel;
 
 
+        public Book? CurrentBook =>
+            _bookStore.CurrentBook;
 
-        public LayoutViewModel(LayoutNavigationStore layoutNavigationStore)
+
+        public string CurrentBookName =>
+            CurrentBook == null ? "No Active Book" : CurrentBook.Name;
+
+
+
+        public LayoutViewModel(LayoutNavigationStore layoutNavigationStore,
+            BookStore bookStore)
         {
+            _bookStore = bookStore;
             _layoutNavigationStore = layoutNavigationStore;
 
+            _bookStore.CurrentBookChanged += OnCurrentBookChanged;
             _layoutNavigationStore.CurrentContentViewModelChanged +=
                 OnContentViewModelChanged;
         }
@@ -33,6 +48,13 @@ namespace WorkerBee.ViewModels
         private void OnContentViewModelChanged()
         {
             OnPropertyChanged(nameof(ContentViewModel));
+        }
+
+
+        private void OnCurrentBookChanged()
+        {
+            OnPropertyChanged(nameof(CurrentBook));
+            OnPropertyChanged(nameof(CurrentBookName));
         }
     }
 }
